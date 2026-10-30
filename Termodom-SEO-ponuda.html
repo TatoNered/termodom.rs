@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SEO plan za Termodom</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: tehnički specifikacioni list — numerisane sekcije, hairline mreža, tabelarne cifre, puna širina u pojasevima */
+:root{
+  --ink:#14181b; --ink-2:#4b555c; --ink-3:#7c878e;
+  --paper:#e8ebea; --surface:#fbfbfa; --surface-2:#f1f3f2;
+  --line:#c7cdcc; --line-soft:#d9dddc;
+  --steel:#17628f; --steel-soft:#e0ecf4;
+  --osb:#a9681f; --osb-soft:#f5e8d6;
+  --danger:#a1301d; --ok:#2c6a4e;
+  --deep:#0f1417; --deep-ink:#edefee; --deep-ink-2:#9aa4a9; --deep-line:#2a3238;
+  --display:'Barlow Condensed','Oswald','Arial Narrow',sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',Helvetica,Arial,sans-serif;
+  --mono:'IBM Plex Mono','SFMono-Regular',Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#e7eae9; --ink-2:#a5afb4; --ink-3:#78848b;
+    --paper:#0d1114; --surface:#151a1e; --surface-2:#1b2126;
+    --line:#2b3339; --line-soft:#232b31;
+    --steel:#64b5e2; --steel-soft:#112e3d;
+    --osb:#d89c52; --osb-soft:#2d2314;
+    --danger:#e07a63; --ok:#6cc096;
+    --deep:#070a0c; --deep-ink:#e7eae9; --deep-ink-2:#9aa4a9; --deep-line:#242c32;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#e7eae9; --ink-2:#a5afb4; --ink-3:#78848b;
+  --paper:#0d1114; --surface:#151a1e; --surface-2:#1b2126;
+  --line:#2b3339; --line-soft:#232b31;
+  --steel:#64b5e2; --steel-soft:#112e3d;
+  --osb:#d89c52; --osb-soft:#2d2314;
+  --danger:#e07a63; --ok:#6cc096;
+  --deep:#070a0c; --deep-ink:#e7eae9; --deep-ink-2:#9aa4a9; --deep-line:#242c32;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--body); font-size:16px; line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--deep)}
+.wrap{max-width:1120px;margin-inline:auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));}
+.band{padding-block:clamp(44px,6vw,86px)}
+.band--deep{background:var(--deep);color:var(--deep-ink)}
+.band--deep .eyebrow{color:var(--deep-ink-2)}
+.band--surface{background:var(--surface)}
+.rule{border:0;border-top:1px solid var(--line);margin:0}
+
+/* ---------- sticky bar ---------- */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--deep);color:var(--deep-ink);border-bottom:1px solid var(--deep-line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:11px}
+.bar__id{font-family:var(--display);font-weight:700;font-size:1.18rem;letter-spacing:.055em;text-transform:uppercase}
+.bar__id span{color:var(--steel)}
+.bar__price{font-family:var(--mono);font-size:.76rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+  border:1px solid var(--steel);color:var(--steel);padding:5px 11px;white-space:nowrap}
+
+/* ---------- type ---------- */
+.eyebrow{font-family:var(--mono);font-size:.715rem;font-weight:500;letter-spacing:.17em;text-transform:uppercase;color:var(--ink-3);margin:0 0 18px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2.4rem,6.4vw,4.3rem);line-height:.98;letter-spacing:-.005em;margin:0 0 22px;text-wrap:balance}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(1.75rem,3.6vw,2.6rem);line-height:1.04;margin:0 0 14px;text-wrap:balance}
+h3{font-family:var(--display);font-weight:600;font-size:1.3rem;line-height:1.16;margin:0 0 8px;letter-spacing:.005em}
+h4{font-family:var(--mono);font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
+p{margin:0 0 15px;max-width:68ch}
+.lead{font-size:clamp(1.02rem,1.6vw,1.2rem);color:var(--ink-2);max-width:62ch}
+.band--deep .lead{color:var(--deep-ink-2)}
+a{color:var(--steel)}
+strong{font-weight:600}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+
+/* ---------- section head ---------- */
+.sechead{display:flex;align-items:baseline;gap:16px;margin-bottom:26px;padding-bottom:16px;border-bottom:2px solid var(--ink)}
+.sechead__no{font-family:var(--mono);font-size:.78rem;font-weight:600;letter-spacing:.1em;color:var(--steel);padding-top:6px}
+.sechead h2{margin:0}
+
+/* ---------- hero ---------- */
+.hero__meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--deep-line);border:1px solid var(--deep-line);margin-top:38px}
+.hero__meta div{background:var(--deep);padding:14px 16px}
+.hero__meta dt{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--deep-ink-2);margin:0 0 5px}
+.hero__meta dd{margin:0;font-family:var(--display);font-size:1.12rem;font-weight:600;letter-spacing:.01em}
+
+/* ---------- stat strip ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--line)}
+.stat{background:var(--surface);padding:22px 18px 20px}
+.stat__v{font-family:var(--display);font-weight:700;font-size:clamp(2.1rem,4.4vw,3rem);line-height:1;font-variant-numeric:tabular-nums;display:block}
+.stat__l{font-size:.86rem;color:var(--ink-2);margin-top:7px;display:block;line-height:1.4}
+.stat--bad .stat__v{color:var(--danger)}
+.stat--good .stat__v{color:var(--ok)}
+.stat--steel .stat__v{color:var(--steel)}
+
+/* ---------- split: kupac vs google ---------- */
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px;margin-top:8px}
+.panel{border:1px solid var(--line);background:var(--surface);min-width:0;display:flex;flex-direction:column}
+.panel__top{padding:13px 16px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.panel__top b{font-family:var(--mono);font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+.panel__url{font-family:var(--mono);font-size:.72rem;color:var(--ink-3);word-break:break-all}
+.panel__body{padding:16px;flex:1}
+.panel--ok .panel__top{background:var(--steel-soft);color:var(--steel)}
+.panel--bad .panel__top{background:var(--osb-soft);color:var(--osb)}
+.plist{list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:.82rem}
+.plist li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dotted var(--line-soft)}
+.plist li:last-child{border-bottom:0}
+.plist span{color:var(--ink-3)}
+.void{font-family:var(--mono);font-size:.82rem}
+.void div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:7px 0;border-bottom:1px dotted var(--line-soft)}
+.void div:last-child{border-bottom:0}
+.void b{color:var(--danger);font-weight:500;text-align:right}
+
+/* ---------- findings table ---------- */
+.tscroll{overflow-x:auto;border:1px solid var(--line);background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:.92rem}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+thead th{font-family:var(--mono);font-size:.69rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);
+  background:var(--surface-2);border-bottom:1px solid var(--line);white-space:nowrap;position:relative}
+tbody tr:last-child td{border-bottom:0}
+td.n{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:500}
+.barcell{min-width:120px}
+.bar2{height:7px;background:var(--line-soft);position:relative;overflow:hidden}
+.bar2 i{position:absolute;inset:0 auto 0 0;background:var(--danger);display:block}
+.bar2.b-mid i{background:var(--osb)}
+.bar2.b-low i{background:var(--steel)}
+.tag{font-family:var(--mono);font-size:.68rem;letter-spacing:.07em;text-transform:uppercase;padding:3px 7px;border:1px solid currentColor;white-space:nowrap}
+.tag--crit{color:var(--danger)}
+.tag--mid{color:var(--osb)}
+.tag--low{color:var(--steel)}
+.yes{color:var(--ok);font-weight:600}
+.no{color:var(--danger);font-weight:600}
+
+/* ---------- cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(252px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.card{background:var(--surface);padding:20px 18px;min-width:0}
+.card__k{font-family:var(--display);font-weight:700;font-size:1.9rem;line-height:1;color:var(--steel);font-variant-numeric:tabular-nums}
+.card p{font-size:.92rem;color:var(--ink-2);margin:8px 0 0}
+
+/* ---------- clusters ---------- */
+.clusters{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.cluster{border-left:3px solid var(--steel);padding:2px 0 2px 15px;min-width:0}
+.cluster h3{font-size:1.1rem;margin-bottom:6px}
+.cluster ul{margin:0;padding-left:17px;font-size:.9rem;color:var(--ink-2)}
+.cluster li{margin-bottom:3px}
+.cluster .who{font-family:var(--mono);font-size:.74rem;color:var(--ink-3);margin-top:9px;display:block}
+
+/* ---------- roadmap ---------- */
+.road{display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+.phase{background:var(--surface);display:grid;grid-template-columns:132px minmax(0,1fr);gap:0}
+.phase__when{background:var(--surface-2);padding:18px 16px;border-right:1px solid var(--line)}
+.phase__when b{font-family:var(--display);font-size:1.45rem;font-weight:700;display:block;line-height:1}
+.phase__when span{font-family:var(--mono);font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-3)}
+.phase__what{padding:18px 20px}
+.phase__what ul{margin:10px 0 0;padding-left:18px;font-size:.93rem;color:var(--ink-2)}
+.phase__what li{margin-bottom:5px}
+@media(max-width:560px){.phase{grid-template-columns:1fr}.phase__when{border-right:0;border-bottom:1px solid var(--line);display:flex;align-items:baseline;gap:10px}}
+
+/* ---------- price ---------- */
+.price{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:1px;background:var(--deep-line);border:1px solid var(--deep-line)}
+@media(max-width:720px){.price{grid-template-columns:1fr}}
+.price__fig{background:var(--deep);padding:30px 26px}
+.price__fig .amt{font-family:var(--display);font-weight:700;font-size:clamp(3.2rem,9vw,4.6rem);line-height:.92;letter-spacing:-.015em;display:block}
+.price__fig .per{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--deep-ink-2);display:block;margin-top:6px}
+.price__fig p{color:var(--deep-ink-2);font-size:.92rem;margin:18px 0 0;max-width:34ch}
+.price__list{background:var(--deep);padding:26px}
+.inc{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:11px 26px}
+.inc li{padding-left:22px;position:relative;font-size:.94rem;color:var(--deep-ink)}
+.inc li::before{content:"";position:absolute;left:0;top:.62em;width:11px;height:2px;background:var(--steel)}
+.note{border:1px solid var(--line);border-left:3px solid var(--osb);background:var(--surface);padding:16px 18px;margin-top:22px}
+.note p{margin:0;font-size:.93rem;color:var(--ink-2)}
+.note b{color:var(--ink)}
+
+/* ---------- cta ---------- */
+.cta{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px;align-items:start}
+.contact{font-family:var(--mono);font-size:.92rem;line-height:2}
+.contact i{color:var(--deep-ink-2);font-style:normal;display:inline-block;min-width:88px}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0}
+.steps li{counter-increment:s;padding:11px 0 11px 40px;position:relative;border-bottom:1px solid var(--deep-line);font-size:.95rem}
+.steps li:last-child{border-bottom:0}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:11px;font-family:var(--mono);font-size:.78rem;color:var(--steel)}
+.foot{font-family:var(--mono);font-size:.72rem;color:var(--ink-3);padding-block:22px;line-height:1.7}
+:focus-visible{outline:2px solid var(--steel);outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){.bar2 i{transition:width .5s ease}}
+</style>
+<style>
+:root{color-scheme:light}
+img{max-width:100%}
+[hidden]{display:none!important}
+@media print{
+  .bar{position:static}
+  body::before{display:none}
+  .band{padding-block:22px;break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <div class="bar__id">Termodom<span>.rs</span></div>
+    <div class="bar__price">300 € / mesečno · razvoj uključen</div>
+  </div>
+</header>
+
+<section class="band band--deep">
+  <div class="wrap">
+    <p class="eyebrow">Predlog saradnje · Organska pretraga · Oktobar 2026</p>
+    <h1>Sadržaj je već napisan.<br>Google ga ne vidi.</h1>
+    <p class="lead">Prošli smo kroz sve strane na termodom.rs. Vaše strane proizvoda imaju više teksta od bilo kog konkurenta u Srbiji, imate 10 kalkulatora potrošnje materijala i 55 članaka koji odgovaraju tačno na ono što kupac upisuje u Google. Problem je što pretraživač najveći deo toga uopšte ne registruje — nema naslova, nema internih linkova, nema cene u kodu strane. Ovaj dokument pokazuje šta smo našli, šta rade konkurenti koji su danas iznad vas i šta konkretno radimo prvih šest meseci.</p>
+    <dl class="hero__meta">
+      <div><dt>Pripremljeno za</dt><dd>TERMOSHOP D.O.O.</dd></div>
+      <div><dt>Domen</dt><dd>termodom.rs</dd></div>
+      <div><dt>Obim analize</dt><dd>834 strane</dd></div>
+      <div><dt>Nalazi</dt><dd>3 113</dd></div>
+      <div><dt>Mesečno</dt><dd>300 €</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="band band--surface" style="padding-block:0">
+  <div class="wrap" style="padding-left:0;padding-right:0">
+    <div class="stats">
+      <div class="stat stat--bad"><span class="stat__v">710</span><span class="stat__l">strana koje ili nemaju naslov, ili nemaju ni jedan interni link — 85% sajta</span></div>
+      <div class="stat stat--bad"><span class="stat__v">110</span><span class="stat__l">strana bez title, H1, canonical i OG oznaka — sve kategorije i ceo blog</span></div>
+      <div class="stat stat--bad"><span class="stat__v">55</span><span class="stat__l">napisanih članaka od kojih ni jedan ne postoji za pretraživač</span></div>
+      <div class="stat stat--steel"><span class="stat__v">706</span><span class="stat__l">strana proizvoda sa pravim tekstom — osnova koja već radi</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sechead"><span class="sechead__no">01</span><h2>Šta smo zapravo našli</h2></div>
+    <p>Sajt nije loše napravljen. Napravljen je tako da se ceo katalog iscrtava u pregledaču kupca, a ne u kodu koji dobija Google. Kupac na <span class="num">/suva-gradnja</span> vidi proizvode i cene. Pretraživač na istoj adresi dobija praznu stranu sa menijem i futerom — i to identičnu na svih 15 kategorija.</p>
+    <p>To je razlog zašto 706 strana proizvoda, u koje je uložen ozbiljan posao, ne donosi saobraćaj: nema kategorija koje bi se rangirale na upite tipa „gips ploče cena“, nema internih linkova koji vode do proizvoda, a blog u kom su odgovori na realna pitanja kupaca Google tretira kao 55 identičnih praznih strana.</p>
+
+    <div class="split">
+      <div class="panel panel--ok">
+        <div class="panel__top"><b>Šta vidi kupac</b><span class="panel__url">termodom.rs/suva-gradnja</span></div>
+        <div class="panel__body">
+          <ul class="plist">
+            <li>Gips ploča 12.5mm SMART 1,20 × 2,00 <span>cena iz webshopa</span></li>
+            <li>Profil za gips CD 60×27 / 3,0 m <span>cena iz webshopa</span></li>
+            <li>Profil za gips UD 28×27 / 3,0 m <span>cena iz webshopa</span></li>
+            <li>Šraf za gips fosfatizovani 35 mm <span>cena iz webshopa</span></li>
+            <li>Revizioni otvor 20 × 20 cm <span>cena iz webshopa</span></li>
+            <li>Gips ploča vlagootporna 12.5mm <span>cena iz webshopa</span></li>
+            <li>… ceo asortiman, VP i MP cene <span>+ kalkulator</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel panel--bad">
+        <div class="panel__top"><b>Šta vidi Google</b><span class="panel__url">termodom.rs/suva-gradnja</span></div>
+        <div class="panel__body">
+          <div class="void">
+            <div>&lt;title&gt;<b>nema</b></div>
+            <div>&lt;h1&gt;<b>nema</b></div>
+            <div>canonical<b>nema</b></div>
+            <div>Open Graph<b>nema</b></div>
+            <div>proizvodi u kodu strane<b>0</b></div>
+            <div>cene u kodu strane<b>0</b></div>
+            <div>interni linkovi ka ovoj strani<b>0</b></div>
+            <div>tekst strane<b>398 reči šablona</b></div>
+          </div>
+          <p style="font-size:.86rem;color:var(--ink-3);margin:14px 0 0">Isti rezultat na: fasade, izolacija, krov, keramika, malterisanje, alat, farbara, grubi, ogrev, metal, gvožđara, veleprodaja, novo u ponudi, ostalo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="band band--surface">
+  <div class="wrap">
+    <div class="sechead"><span class="sechead__no">02</span><h2>Dijagnostika po nalazima</h2></div>
+    <p>Svi nalazi iz tehničke analize, sortirani po broju strana koje dodiruju. Kolona „posao“ pokazuje koliko je rada potrebno — većina se rešava šablonski, kroz kod, jednom za celu grupu strana.</p>
+    <div class="tscroll">
+      <table>
+        <thead><tr><th>Nalaz</th><th>Strana</th><th class="barcell">Obim</th><th>Zašto je važno</th><th>Posao</th></tr></thead>
+        <tbody>
+          <tr><td>Tanak sopstveni tekst</td><td class="n">809</td><td class="barcell"><span class="bar2"><i style="width:100%"></i></span></td><td>Naslovna ima 42 reči sopstvenog teksta, kontakt 18. Ostatak je meni i futer.</td><td><span class="tag tag--crit">veći</span></td></tr>
+          <tr><td>Strana bez ijednog internog linka</td><td class="n">709</td><td class="barcell"><span class="bar2"><i style="width:88%"></i></span></td><td>600 od 706 proizvoda i svih 55 članaka Google nalazi samo preko sitemap-a, bez težine i bez anchor teksta.</td><td><span class="tag tag--crit">veći</span></td></tr>
+          <tr><td>Description prekratak</td><td class="n">376</td><td class="barcell"><span class="bar2 b-mid"><i style="width:46%"></i></span></td><td>Medijana na proizvodima je 64 znaka. Google tada sam sastavlja snippet.</td><td><span class="tag tag--low">lak</span></td></tr>
+          <tr><td>Description se ponavlja</td><td class="n">221</td><td class="barcell"><span class="bar2 b-mid"><i style="width:27%"></i></span></td><td>Iste oznake na više strana — strane se međusobno potiskuju.</td><td><span class="tag tag--low">lak</span></td></tr>
+          <tr><td>Title i description se preklapaju</td><td class="n">218</td><td class="barcell"><span class="bar2 b-mid"><i style="width:27%"></i></span></td><td>Isti tekst dva puta u rezultatu pretrage — gubi se prostor za cenu i dostavu.</td><td><span class="tag tag--low">lak</span></td></tr>
+          <tr><td>Description ne postoji</td><td class="n">111</td><td class="barcell"><span class="bar2 b-mid"><i style="width:14%"></i></span></td><td></td><td><span class="tag tag--low">lak</span></td></tr>
+          <tr><td>Nema title / H1 / canonical / OG</td><td class="n">110</td><td class="barcell"><span class="bar2"><i style="width:14%"></i></span></td><td>Tačno one strane koje treba da se rangiraju: 15 kategorija i 55 članaka.</td><td><span class="tag tag--crit">veći</span></td></tr>
+          <tr><td>Title predugačak</td><td class="n">104</td><td class="barcell"><span class="bar2 b-low"><i style="width:13%"></i></span></td><td>Google reže posle ~60 znakova, pa se gubi ono bitno na kraju.</td><td><span class="tag tag--low">lak</span></td></tr>
+          <tr><td>Canonical pokazuje na drugu adresu</td><td class="n">32</td><td class="barcell"><span class="bar2 b-low"><i style="width:4%"></i></span></td><td>Posledica dijakritike u adresama (ž, č, ć, š). 40 od 55 blog adresa ima isti problem.</td><td><span class="tag tag--low">lak</span></td></tr>
+          <tr><td>Identičan tekst na više proizvoda</td><td class="n">7</td><td class="barcell"><span class="bar2 b-mid"><i style="width:2%"></i></span></td><td>Gips ploča 120×200, ×260, ×280, ×300 imaju isti opis; isto i glet 1 kg / 5 kg.</td><td><span class="tag tag--mid">srednji</span></td></tr>
+          <tr><td>Nema strukturiranih podataka</td><td class="n">834</td><td class="barcell"><span class="bar2"><i style="width:100%"></i></span></td><td>Nema Product, Offer, LocalBusiness, FAQ ni Breadcrumb oznaka — nema cene, ocene ni putanje u rezultatu pretrage.</td><td><span class="tag tag--mid">srednji</span></td></tr>
+          <tr><td>Proizvodi bez ijednog podnaslova</td><td class="n">513</td><td class="barcell"><span class="bar2 b-mid"><i style="width:63%"></i></span></td><td>Tekst postoji, ali nije razbijen na sekcije koje Google može da izvuče kao odgovor.</td><td><span class="tag tag--mid">srednji</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.88rem;color:var(--ink-3);margin-top:14px">Od 834 strane, samo <span class="num">28</span> je bez zamerke na oznake i interne linkove. 743 strane imaju problem u title-u ili description-u.</p>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="band">
+  <div class="wrap">
+    <div class="sechead"><span class="sechead__no">03</span><h2>Ono što već imate, a ne koristite</h2></div>
+    <p>Ovo je razlog zašto ovaj projekat ima smisla raditi: ne gradimo od nule. Tri četvrtine posla koji se obično plaća posebno već je uložena u sajt — treba je samo otključati za pretraživač.</p>
+    <div class="cards">
+      <div class="card">
+        <span class="card__k">706</span>
+        <h3 style="margin-top:6px">strana proizvoda sa pravim tekstom</h3>
+        <p>Medijana 1 785 reči po strani, sa opisom primene i tehničkim podacima. Većina konkurenata ima tri rečenice i tabelu.</p>
+      </div>
+      <div class="card">
+        <span class="card__k">10</span>
+        <h3 style="margin-top:6px">kalkulatora potrošnje materijala</h3>
+        <p>Fasada, suva gradnja, gletovanje, izolacija potkrovlja, lepak za pločice, krovni lim, zidanje, hidroizolacija, izolacija poda. Po 1 700–2 400 reči, uredni naslovi i oznake. Trenutno do njih vodi po 9 linkova i nijedan iz kataloga.</p>
+      </div>
+      <div class="card">
+        <span class="card__k">55</span>
+        <h3 style="margin-top:6px">članaka na kupovna pitanja</h3>
+        <p>„Koliko košta stiropor“, „koliko košta OSB ploča“, „kamena vuna ili stiropor za fasadu“, „koje dimenzije gipsanih ploča postoje“. Tekstovi su tu — za Google ih nema.</p>
+      </div>
+      <div class="card">
+        <span class="card__k">2 252</span>
+        <h3 style="margin-top:6px">slike, samo jedna bez alt oznake</h3>
+        <p>Retkost na sajtovima ove veličine. Osnova za saobraćaj iz Google slika je već postavljena.</p>
+      </div>
+      <div class="card">
+        <span class="card__k">VP / MP</span>
+        <h3 style="margin-top:6px">dve cene i Profi kutak</h3>
+        <p>Veleprodajna i maloprodajna cena i poseban nalog za majstore. Jak komercijalni faktor koji sada nije ni u jednom naslovu ni u strukturiranim podacima.</p>
+      </div>
+      <div class="card">
+        <span class="card__k">0</span>
+        <h3 style="margin-top:6px">iskorišćene prednosti</h3>
+        <p>Sve navedeno danas ne učestvuje u rangiranju. To je deo koji se rešava najbrže i najjeftinije.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="band band--surface">
+  <div class="wrap">
+    <div class="sechead"><span class="sechead__no">04</span><h2>Ko je danas iznad vas i zašto</h2></div>
+    <p>Na upitima za materijal sa cenom prvu stranu drže tri tipa igrača: veliki webshopovi sa pravim kategorijama, lokalna stovarišta sa stranama tipa „cenovnik“, i agregatori oglasa. Nijedan od njih nema bolji sadržaj o proizvodu od vas. Svi imaju kategorije koje Google može da pročita.</p>
+    <div class="tscroll">
+      <table>
+        <thead><tr><th>Sajt</th><th>Kategorije čitljive za Google</th><th>Tekst na kategoriji</th><th>Cene u kodu strane</th><th>Strane „cena“</th><th>Filteri</th></tr></thead>
+        <tbody>
+          <tr style="background:var(--osb-soft)"><td><strong>termodom.rs</strong></td><td><span class="no">ne</span></td><td><span class="no">ne</span></td><td><span class="no">ne</span></td><td><span class="no">ne</span></td><td><span class="no">ne</span></td></tr>
+          <tr><td>gradim.rs</td><td><span class="yes">da</span></td><td><span class="yes">da</span></td><td><span class="yes">da</span></td><td>delimično</td><td><span class="yes">da</span>, po proizvođaču</td></tr>
+          <tr><td>tehnokomerc.rs</td><td><span class="yes">da</span></td><td><span class="yes">da</span></td><td><span class="yes">da</span></td><td><span class="yes">da</span>, zaseban cenovnik po materijalu</td><td>ne</td></tr>
+          <tr><td>srmagroup.com</td><td><span class="yes">da</span></td><td><span class="yes">da</span>, uz pitanja i odgovore</td><td><span class="yes">da</span></td><td><span class="yes">da</span>, uz plaćanje na rate</td><td>ne</td></tr>
+          <tr><td>crafter.rs</td><td><span class="yes">da</span></td><td>samo meta opis</td><td>delimično</td><td>ne</td><td>ne</td></tr>
+          <tr><td>eponuda.com · kupujemprodajem.com · halooglasi.com</td><td><span class="yes">da</span></td><td>—</td><td><span class="yes">da</span></td><td><span class="yes">da</span></td><td><span class="yes">da</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px">Praktično: <strong>tehnokomerc.rs</strong> na upit za cenu gipsanih ploča nudi stranu sa cenom po m², specifikacijom po tipu ploče i linkom na PDF. <strong>srmagroup.com</strong> ima stranu čija je adresa bukvalno „gipsane-ploce-cena“, sa pitanjima i odgovorima o tome šta utiče na cenu. Vi imate bolje zalihe, dve cene i kalkulator potrošnje — ali na tom upitu niste u igri, jer odgovarajuća strana za Google ne postoji.</p>
+    <div class="note"><p><b>Dobra vest:</b> nijedan od njih ne radi ništa što se ne može preteći u roku od nekoliko meseci. Njihove prednosti su tehničke, a ne sadržajne — a tehničke prednosti se nadoknađuju najbrže.</p></div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="band">
+  <div class="wrap">
+    <div class="sechead"><span class="sechead__no">05</span><h2>Tražnja koja vam sada prolazi kroz prste</h2></div>
+    <p>Ovo su grupe upita po kojima kupac u Srbiji traži materijal. Za svaku grupu kod vas već postoji i proizvod i tekst — nedostaje strana koja na nju odgovara. Posle tehničkog dela, svaka kategorija dobija svoju ulaznu stranu: naziv, cena po jedinici, kalkulator, pitanja i odgovori, linkovi na proizvode.</p>
+    <div class="clusters">
+      <div class="cluster">
+        <h3>Suva gradnja</h3>
+        <ul><li>gips ploče cena, dimenzije, vlagootporne, vatrootporne</li><li>profili UD, CD, UA — razmak, montaža</li><li>šrafovi, bandaž, revizioni otvori</li></ul>
+        <span class="who">Sada drže: tehnokomerc, srmagroup, agregatori</span>
+      </div>
+      <div class="cluster">
+        <h3>Fasada i izolacija</h3>
+        <ul><li>fasadni stiropor cena, 15 kg vs 17 kg</li><li>kamena vuna gustina, cena, kamena vuna ili stiropor</li><li>lepak za stiropor, potrošnja po m²</li></ul>
+        <span class="who">Sada drže: gradim, veliki trgovci, oglasi</span>
+      </div>
+      <div class="cluster">
+        <h3>OSB i drvo</h3>
+        <ul><li>OSB ploče cena, OSB 2 ili OSB 3, dimenzije</li><li>podloge za laminat, klase laminata</li></ul>
+        <span class="who">Sada drže: agregatori i oglasi</span>
+      </div>
+      <div class="cluster">
+        <h3>Krov i hidroizolacija</h3>
+        <ul><li>krovni lim T18, T40, crep lim</li><li>ondulin, ter papir, čepasta folija</li><li>hidroizolacija kupatila, terase, temelja</li></ul>
+        <span class="who">Sada drže: specijalizovani trgovci</span>
+      </div>
+      <div class="cluster">
+        <h3>Malterisanje i gletovanje</h3>
+        <ul><li>glet masa cena, potrošnja po m²</li><li>poludisperzija i disperzija, boja za krečenje</li><li>cementna košuljica, mreža, dilatacija</li></ul>
+        <span class="who">Sada drže: farbare i veliki marketi</span>
+      </div>
+      <div class="cluster">
+        <h3>Lokalno i veleprodaja</h3>
+        <ul><li>građevinski materijal Beograd, Krnjača, Zrenjaninski put</li><li>dostava materijala, prevoz, stovarište</li><li>veleprodaja materijala, cene za majstore</li></ul>
+        <span class="who">Sada drže: imenici tipa planplus.rs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="band band--surface">
+  <div class="wrap">
+    <div class="sechead"><span class="sechead__no">06</span><h2>Plan rada, prvih šest meseci</h2></div>
+    <p>Redosled nije slučajan. Prvo se otključava ono što već postoji, zatim se gradi struktura, i tek onda se piše novo. Pisati nove tekstove na sajtu koji Google ne čita je bacanje para.</p>
+    <div class="road">
+      <div class="phase">
+        <div class="phase__when"><b>1. mesec</b><span>tehnički temelj</span></div>
+        <div class="phase__what">
+          <h3>Da Google počne da čita sajt</h3>
+          <ul>
+            <li>Kategorije i blog se iscrtavaju na serveru, sa sadržajem u kodu strane — radi naš programer, bez posebne naplate</li>
+            <li>Title, H1, canonical i OG oznake na 110 strana: šablon za sve, ručno za 20 najvažnijih kategorija</li>
+            <li>Cene i podaci o proizvodu u kod strane + Product, Offer, LocalBusiness i Breadcrumb oznake</li>
+            <li>Adrese bez dijakritike i velikih slova, sa 301 preusmerenjima; rešavanje 32 nesaglasna canonical-a</li>
+            <li>Čišćenje sitemap-a, robots, povezivanje Search Console i analitike, polazno merenje</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase__when"><b>2. mesec</b><span>struktura i linkovi</span></div>
+        <div class="phase__what">
+          <h3>Da težina sajta stigne do proizvoda</h3>
+          <ul>
+            <li>Putanja (breadcrumb) kroz ceo sajt i pravi linkovi kategorija → podkategorija → proizvod</li>
+            <li>Proizvodi se prikazuju na kategorijama, sa stranicanjem i filterima koje Google može da pročita</li>
+            <li>Blokovi „povezani proizvodi“ i „materijal iz ovog teksta“ na člancima</li>
+            <li>Svaki kalkulator linkuje tačno one proizvode koje obračunava — ovo radi i za prodaju, ne samo za SEO</li>
+            <li>Cilj: 709 strana bez linkova svedeno na nulu</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase__when"><b>3–4. mesec</b><span>semantika i sadržaj</span></div>
+        <div class="phase__what">
+          <h3>Da svaka grupa upita ima svoju stranu</h3>
+          <ul>
+            <li>Semantičko jezgro za srpsko tržište i raspored upita po stranama</li>
+            <li>15 kategorija prerađeno u prave ulazne strane: tekst, cena po jedinici, pitanja i odgovori, linkovi na proizvode</li>
+            <li>Jedinstveni title i description za 706 proizvoda — šablonski, plus ručno za prvih 100 po prometu</li>
+            <li>Razdvajanje 7 proizvoda sa identičnim tekstom i spajanje gde je to ispravnije</li>
+            <li>55 postojećih članaka ispravljeno i objavljeno kako treba; dalje 4 nova teksta mesečno</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase">
+        <div class="phase__when"><b>5–6. mesec</b><span>lokalno i autoritet</span></div>
+        <div class="phase__what">
+          <h3>Da vas nađu i po gradu, a ne samo po materijalu</h3>
+          <ul>
+            <li>Google profil firme za Krnjaču: fotografije, asortiman, objave, rad na ocenama</li>
+            <li>Strane za dostavu i prevoz po Beogradu i Srbiji, povezane sa kategorijama</li>
+            <li>Upis u relevantne imenike i kataloge, linkovi sa sajtova proizvođača i partnera</li>
+            <li>Rad na spoljnim linkovima — jedina stavka koja može da nosi dodatni trošak, uz vaše odobrenje</li>
+            <li>Mesečno: pozicije, Search Console, tehnički nadzor, popravke konverzije, izveštaj</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="band">
+  <div class="wrap">
+    <div class="sechead"><span class="sechead__no">07</span><h2>Cena i šta je u njoj</h2></div>
+    <p>Jedna stavka mesečno. U nju ulazi i rad programera iz našeg tima — sve što smo naveli u planu, uključujući izmene na samom sajtu, ne naplaćuje se posebno. Nema zasebne faktura za razvoj, za šablone, za oznake ni za nove strane.</p>
+    <div class="price">
+      <div class="price__fig">
+        <span class="amt">300 €</span>
+        <span class="per">mesečno · bez ugovorne obaveze na godinu</span>
+        <p>Rad se plaća po mesecu. Ako posle tri meseca ne vidite pomeranje u Search Console-u, prekidate bez obrazloženja.</p>
+      </div>
+      <div class="price__list">
+        <h4 style="color:var(--deep-ink-2)">Uključeno u mesečnu cenu</h4>
+        <ul class="inc">
+          <li>SEO specijalista na projektu</li>
+          <li>Programer iz našeg tima za sve izmene na sajtu</li>
+          <li>Serversko iscrtavanje kategorija i bloga</li>
+          <li>Title, H1, canonical i OG za sve strane</li>
+          <li>Strukturirani podaci: Product, Offer, LocalBusiness, FAQ, Breadcrumb</li>
+          <li>Prerada adresa i 301 preusmerenja</li>
+          <li>Interno povezivanje i putanje kroz sajt</li>
+          <li>Semantičko jezgro za srpsko tržište</li>
+          <li>Tekstovi na srpskom za kategorije i blog</li>
+          <li>Ispravka 55 postojećih članaka</li>
+          <li>4 nova teksta mesečno</li>
+          <li>Google profil firme i lokalno pozicioniranje</li>
+          <li>Search Console, analitika, nadzor</li>
+          <li>Mesečni izveštaj sa pozicijama i poslom</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note">
+      <p><b>Jedini moguć dodatni trošak:</b> kupovina spoljnih linkova, do <span class="num">50 €</span> mesečno, i to isključivo uz vaše prethodno odobrenje za svaki link. Bez odobrenja — nema troška. Sve ostalo iz plana je u 300 €.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="band band--surface">
+  <div class="wrap">
+    <div class="sechead"><span class="sechead__no">08</span><h2>Kako ćete znati da radi</h2></div>
+    <p>Pozicije su posledica, a ne mera posla. Zato se u prvim mesecima mere stvari koje se vide odmah, a kasnije one koje donose prodaju. Svaki broj iz ove tabele stoji u mesečnom izveštaju.</p>
+    <div class="tscroll">
+      <table>
+        <thead><tr><th>Pokazatelj</th><th>Danas</th><th>Posle 3 meseca</th><th>Posle 6 meseci</th></tr></thead>
+        <tbody>
+          <tr><td>Strane sa ispravnim title i H1</td><td class="n">110 strana bez njih</td><td class="n">834 od 834</td><td class="n">834 od 834</td></tr>
+          <tr><td>Strane sa zamerkom na title ili description</td><td class="n">743</td><td class="n">do 50</td><td class="n">0</td></tr>
+          <tr><td>Strane bez ijednog internog linka</td><td class="n">709</td><td class="n">do 30</td><td class="n">0</td></tr>
+          <tr><td>Kategorije kao ulazne strane za Google</td><td class="n">0</td><td class="n">15</td><td class="n">15 + podkategorije</td></tr>
+          <tr><td>Članci vidljivi u pretrazi</td><td class="n">0</td><td class="n">55</td><td class="n">67+</td></tr>
+          <tr><td>Cena i putanja u rezultatu pretrage</td><td class="no">ne</td><td class="yes">da, na proizvodima</td><td class="yes">da, na celom katalogu</td></tr>
+          <tr><td>Prikazi i klikovi u Search Console-u</td><td class="n">ne mere se</td><td>prvi rast, merljiv po nedelji</td><td>organska pretraga kao glavni kanal dolazaka</td></tr>
+          <tr><td>Upiti i porudžbine iz pretrage</td><td class="n">ne prate se</td><td>postavljeno merenje poziva i korpe</td><td>cena po upitu poznata i praćena</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.88rem;color:var(--ink-3);margin-top:14px">Ne obećavamo određeno mesto u pretrazi — to niko ozbiljan ne radi. Obećavamo da će 834 strane biti vidljive, povezane i napisane za upite po kojima vas kupci traže, i da ćete svakog meseca videti šta je urađeno i šta se pomerilo.</p>
+  </div>
+</section>
+
+<section class="band band--deep">
+  <div class="wrap">
+    <div class="cta">
+      <div>
+        <p class="eyebrow">Kako počinjemo</p>
+        <h2 style="margin-bottom:18px">Prvi mesec rešava ono najskuplje</h2>
+        <ol class="steps">
+          <li>Pristup sajtu i Search Console-u — ili nam dajte programera na vezu, radimo s njim</li>
+          <li>Polazno merenje i spisak izmena po prioritetu, u prvoj nedelji</li>
+          <li>Tehnički deo ide u rad odmah: kategorije i blog postaju čitljivi za Google</li>
+          <li>Prvi izveštaj na kraju meseca, sa onim što je pomereno</li>
+        </ol>
+      </div>
+      <div>
+        <p class="eyebrow">Kontakt</p>
+        <div class="contact">
+          <i>E-pošta</i> temsem2003@gmail.com<br>
+          <i>Telegram</i> @Kkiriiiii<br>
+          <i>Predlog za</i> termodom.rs<br>
+          <i>Cena</i> 300 € mesečno
+        </div>
+        <p style="color:var(--deep-ink-2);font-size:.92rem;margin-top:18px">Pitanja na bilo koju stavku iz ovog dokumenta su u redu — radije ćemo objasniti pet puta nego započeti posao koji vam nije jasan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="band" style="padding-block:0">
+  <div class="wrap">
+    <p class="foot">Osnova dokumenta: tehnička analiza termodom.rs — 834 strane u obradi, 3 113 nalaza, oktobar 2026. Podaci o konkurenciji iz javno dostupnih strana sajtova gradim.rs, tehnokomerc.rs, srmagroup.com i crafter.rs. Cene konkurenata i njihov promet nisu predmet ovog dokumenta.</p>
+  </div>
+</footer>
+</body>
+</html>
